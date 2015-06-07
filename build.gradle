@@ -1,0 +1,20 @@
+apply plugin: 'java'
+apply plugin: 'application' //THIS IS NECESSARY
+
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+version = '1.0'
+
+repositories {
+    mavenCentral()
+}
+
+mainClassName = 'com.gradle.test.sys.in.Reader'
+
+run {
+    standardInput = System.in
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+}
